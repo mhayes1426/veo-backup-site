@@ -1,0 +1,69 @@
+:root {
+  color-scheme: dark;
+  --background: #0b1118;
+  --surface: #141d27;
+  --line: #2a3847;
+  --text: #e8eef5;
+  --muted: #a7b5c4;
+  --accent: #67dda5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--background); color: var(--text); line-height: 1.7; }
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { color: #b5f7d6; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+.container { width: min(1080px, calc(100% - 48px)); margin: 0 auto; }
+.skip-link { position: absolute; top: -100px; left: 16px; padding: 8px 16px; background: var(--surface); }
+.skip-link:focus { top: 8px; }
+header { border-bottom: 1px solid var(--line); }
+.header-inner { min-height: 96px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); font-size: 17px; font-weight: 700; text-decoration: none; }
+.mark { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--accent); border-radius: 10px; color: var(--accent); font-size: 13px; letter-spacing: .05em; }
+nav { display: flex; gap: 24px; flex-wrap: wrap; }
+nav a { font-size: 14px; color: var(--muted); text-decoration: none; }
+nav a[aria-current="page"] { color: var(--accent); }
+.hero { padding: 88px 0 64px; max-width: 800px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 24px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--accent); }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -.035em; }
+h1 { font-size: clamp(38px, 6vw, 66px); font-weight: 650; margin: 0 0 24px; }
+h2 { margin: 0 0 18px; font-size: 28px; }
+h3 { margin: 0 0 12px; font-size: 19px; }
+p { margin: 0 0 18px; }
+.lead { max-width: 680px; font-size: 20px; color: var(--muted); }
+.hero-links { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 30px; }
+.button { display: inline-block; padding: 11px 19px; border-radius: 7px; color: var(--background); background: var(--accent); font-size: 14px; font-weight: 700; text-decoration: none; }
+.button:hover { background: #b5f7d6; color: var(--background); }
+.hero-links > a:not(.button) { align-self: center; font-size: 14px; }
+.workflow { margin-bottom: 64px; padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.workflow > h2 { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; margin: 26px 0 0; list-style: none; gap: 32px; }
+.step-number { display: block; margin-bottom: 18px; color: var(--accent); font-size: 12px; font-variant-numeric: tabular-nums; }
+.steps p, .muted { color: var(--muted); }
+.steps p { font-size: 15px; margin-bottom: 0; }
+.explanation { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; padding: 0 0 64px; }
+.explanation p { color: var(--muted); }
+.note { padding: 20px 24px; border-left: 2px solid var(--accent); background: var(--surface); }
+.policy { max-width: 780px; padding-bottom: 64px; }
+.policy .hero { padding-bottom: 32px; }
+.policy h1 { font-size: clamp(36px, 5vw, 54px); }
+.policy section { padding: 28px 0 10px; border-top: 1px solid var(--line); }
+.policy h2 { font-size: 23px; }
+.policy li { margin-bottom: 12px; }
+.policy ul, .policy ol { padding-left: 23px; }
+code { color: var(--accent); font-size: .9em; overflow-wrap: anywhere; }
+footer { border-top: 1px solid var(--line); padding: 28px 0 36px; color: var(--muted); font-size: 13px; }
+.footer-inner { display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; }
+footer p { margin: 0; }
+@media (max-width: 650px) {
+  .container { width: calc(100% - 36px); }
+  .header-inner { min-height: 106px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; }
+  nav { gap: 20px; }
+  .hero { padding: 52px 0 40px; }
+  .lead { font-size: 18px; }
+  .workflow { padding: 22px; margin-bottom: 44px; }
+  .steps, .explanation { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .step-number { margin-bottom: 8px; }
+  .explanation { padding-bottom: 44px; }
+}

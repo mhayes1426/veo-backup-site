@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Veo Backup Personal accesses, uses, stores, and shares Google and YouTube data for personal recording backups.">
+  <title>Privacy Policy · Veo Backup Personal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header><div class="container header-inner">
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">VB</span>Veo Backup Personal</a>
+    <nav aria-label="Main navigation"><a href="./">Overview</a><a href="privacy.html" aria-current="page">Privacy policy</a></nav>
+  </div></header>
+  <main class="container policy" id="main">
+    <div class="hero"><p class="eyebrow">Data &amp; authorization</p><h1>Privacy policy</h1><p class="lead">Veo Backup Personal is a personal recording-backup tool, not a public service.</p><p class="muted">Effective November 16, 2026</p></div>
+    <section aria-labelledby="operator"><h2 id="operator">Who operates this tool</h2>
+      <p>The tool is operated for personal use by the owner of the <a href="https://github.com/mhayes1426">mhayes1426 GitHub account</a>. It runs on the owner's computers and personally operated server, including an Unraid installation. This policy covers the tool's handling of Google and YouTube data and this informational website.</p>
+    </section>
+    <section aria-labelledby="access"><h2 id="access">Information accessed and permissions requested</h2>
+      <p>The owner signs in through Google's OAuth authorization flow. The tool does not collect the owner's Google password. It requests these permissions:</p>
+      <ul>
+        <li><code>youtube.upload</code>: upload selected local video recordings to the authorized YouTube channel.</li>
+        <li><code>youtube.force-ssl</code>: list the owner's playlists, check playlist membership, assign uploaded videos to selected playlists, check channel access, and update recording dates. Google's consent screen describes this scope more broadly than these specific functions.</li>
+      </ul>
+      <p>Data handled includes local video files; recording titles and dates; YouTube video IDs and links; playlist IDs, names, and membership; channel ID and title; upload status, retry and error information; and OAuth access and refresh tokens. Resumable upload URLs are also stored because they are needed to recover interrupted uploads.</p>
+    </section>
+    <section aria-labelledby="use"><h2 id="use">How information is used</h2>
+      <p>Data is used to maintain the owner's recording archive, upload selected videos, apply configured visibility and audience settings, assign playlists, update recording dates, display status, check authorization, and resume interrupted work. The tool does not use its Google permissions to read comments or delete YouTube videos.</p>
+      <p>Google data is not used for advertising, profiling, sale, or training machine-learning models. Its use is limited to operating this personal backup workflow. Veo Backup Personal's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+    </section>
+    <section aria-labelledby="storage"><h2 id="storage">Storage and security</h2>
+      <p>Videos, the recording database, operational logs, and saved authorization files are stored on the owner's devices and server. Database backups can contain video and playlist identifiers and resumable upload URLs. OAuth token files are stored with restrictive file permissions and must be protected like passwords. The application communicates with Google APIs over HTTPS.</p>
+      <p>The public website does not receive or store OAuth tokens, local recordings, or the operational database. It contains no analytics scripts, advertising, account sign-in, or application cookies.</p>
+    </section>
+    <section aria-labelledby="sharing"><h2 id="sharing">Sharing and third-party services</h2>
+      <p>Selected video files and their upload metadata are sent to Google and YouTube at the owner's direction. A video configured as public becomes available to the public on YouTube. Its audience depends on the visibility and sharing settings applied to that video.</p>
+      <p>The tool does not sell Google user data or send it to a separate application-operator backend. Google processes uploaded data under its <a href="https://policies.google.com/privacy">Privacy Policy</a>, and use of YouTube is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
+      <p>This informational website is hosted by GitHub Pages. GitHub may collect technical request information, including IP addresses, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+    </section>
+    <section aria-labelledby="retention"><h2 id="retention">Retention, revocation, and deletion</h2>
+      <p>Local videos and operational records remain until the owner removes them; configured log rotation and database-backup retention may remove older copies. Uploaded videos remain on YouTube until removed there. Revoking authorization does not delete previously uploaded videos or local backups.</p>
+      <ol>
+        <li>Revoke Google access through <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>.</li>
+        <li>Remove the local OAuth token file to stop the tool from using that saved authorization. Remove protected copies and backups as appropriate.</li>
+        <li>Delete uploaded videos through <a href="https://studio.youtube.com/">YouTube Studio</a>. Remove local recordings, database records, logs, and backups separately from the owner's storage when no longer needed.</li>
+      </ol>
+    </section>
+    <section aria-labelledby="contact"><h2 id="contact">Contact and policy updates</h2>
+      <p>For questions about the tool or its data handling, contact its operator through the <a href="https://github.com/mhayes1426">GitHub profile</a>. This policy will be updated when the personal tool's data practices change, with the effective date shown above.</p>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><p>Veo Backup Personal · Personal use</p><a href="./">Back to overview</a></div></footer>
+</body>
+</html>

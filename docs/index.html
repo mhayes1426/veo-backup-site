@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Veo Backup Personal is a personal tool for backing up authorized Veo sports recordings and uploading selected videos to the owner's YouTube channel.">
+  <title>Veo Backup Personal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="./"><span class="mark" aria-hidden="true">VB</span>Veo Backup Personal</a>
+      <nav aria-label="Main navigation">
+        <a href="./" aria-current="page">Overview</a>
+        <a href="privacy.html">Privacy policy</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container" id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">A personal recording archive</p>
+      <h1 id="page-title">Keep the games.<br>Keep the memories.</h1>
+      <p class="lead">Veo Backup Personal preserves sports recordings the owner is authorized to access, keeps a local video archive, and uploads selected games to the owner's YouTube channel.</p>
+      <div class="hero-links">
+        <a class="button" href="privacy.html">Read the privacy policy</a>
+        <a href="https://github.com/mhayes1426">Project operator on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="workflow" aria-labelledby="workflow-title">
+      <h2 id="workflow-title">How the personal tool works</h2>
+      <ol class="steps">
+        <li><span class="step-number" aria-hidden="true">01 / BACK UP</span><h3>Save authorized recordings</h3><p>Download available full-game recordings from the owner's Veo account to storage on a personally operated server.</p></li>
+        <li><span class="step-number" aria-hidden="true">02 / VERIFY</span><h3>Check the local archive</h3><p>Track recordings, download progress, and media verification in a local database.</p></li>
+        <li><span class="step-number" aria-hidden="true">03 / UPLOAD</span><h3>Send selected games to YouTube</h3><p>Queue verified recordings, choose an optional playlist, and upload using the owner's Google authorization and configured visibility.</p></li>
+      </ol>
+    </section>
+    <section class="explanation" aria-labelledby="authorization-title">
+      <h2 id="authorization-title">Google access stays<br>under the owner's control.</h2>
+      <div>
+        <p>The tool uses Google OAuth to request permission to upload videos, manage their playlist assignments, check the authorized channel, and update recording dates. Google handles sign-in; the tool does not receive the owner's Google password.</p>
+        <p>Authorization tokens and operational records are stored on the owner's devices. The public website does not provide account sign-in, receive tokens, or host game recordings.</p>
+        <p class="note">This is a personal-use project operated by the owner of the <a href="https://github.com/mhayes1426">mhayes1426</a> GitHub account. It is not a public upload service and is not affiliated with Veo, Google, or YouTube.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><p>Veo Backup Personal · Personal use</p><a href="privacy.html">Privacy policy</a></div></footer>
+</body>
+</html>
